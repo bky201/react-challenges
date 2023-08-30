@@ -12,7 +12,7 @@ class NavBarSimple extends Component {
         }
     } 
 
-    handleclick = () => {
+    handleClick = () => {
         this.setState((prevState) => ({
             message: prevState.message === "Hello, guest!" ? "Welcome back, user!" : "Hello, guest!",
             buttonText: prevState.buttonText === "Log out" ? "Log in" : "Log out",
@@ -25,7 +25,7 @@ class NavBarSimple extends Component {
                 <h1>My Gallery</h1>
                 <div>
                     <span>{this.state.message}</span>
-                    <button onClick={() => this.handleclick()}>{this.state.buttonText}</button>
+                    <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
                 </div>
             </div>
         )
