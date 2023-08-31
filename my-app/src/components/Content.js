@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import css from "./css/Content.module.css";
 import {savedPosts} from "../posts.json";
-// import PostItem from "./PostItem";
+import PostItem from "./PostItem";
 
 export class Content extends Component {
 
@@ -17,7 +17,8 @@ export class Content extends Component {
             <h1>My Photos</h1>
         </div>
         <div className={css.SearchResults}>
-            {
+            {/* part-1 Creating the map function */}
+            {/* {
             savedPosts.map((post) => {
                 return (
                 <div className={css.SearchItem} key={post.title}>
@@ -28,7 +29,10 @@ export class Content extends Component {
                 </div>
                 )
             })
-            }
+            } */}
+
+            {/* Part 2: Creating a child component */}
+            <PostItem savedPosts={savedPosts} />
         </div>
       </div>
     )
